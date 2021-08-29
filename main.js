@@ -2,6 +2,7 @@ const nameInput = document.querySelector('.name-input');
 const searchBtn = document.querySelector('.search_btn');
 const weatherImg = document.querySelector('.weather-img');
 const cityName = document.querySelector('.city-Name');
+const countryName = document.querySelector('.weather-country');
 const weatherTemp = document.querySelector('.weather-deg');
 const weatherType = document.querySelector('.weather-name');
 const weatherContainer = document.querySelector('.weather-status');
@@ -19,5 +20,6 @@ function displayData(dataCityName) {
     weatherImg.src = `https://openweathermap.org/img/wn/${dataCityName.weather[0].icon}@2x.png`;
     cityName.innerText = `${dataCityName.name}`;
     weatherTemp.textContent = `${dataCityName.wind.deg}`;
+    countryName.textContent = `${dataCityName.sys.country}`;
     weatherType.textContent = `${dataCityName.weather[0].main}`;
 }
